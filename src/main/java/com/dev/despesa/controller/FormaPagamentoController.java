@@ -34,19 +34,19 @@ public class FormaPagamentoController {
 	}
 	
 	@GetMapping("/{id}")
-	public FormaDePagamento buscar(@PathVariable("id") Long id) {
+	public FormaDePagamento buscar(@PathVariable Long id) {
 		return pagamentoService.buscar(id);
 	}
 
 	@PutMapping("/{id}")
-	public FormaDePagamento atualizar(@PathVariable("id") Long id,
+	public FormaDePagamento atualizar(@PathVariable Long id,
 													@RequestBody FormaDePagamento formaDePagamento) {
 		FormaDePagamento formaPagamento = pagamentoService.atualizar(formaDePagamento, id);
 		return formaPagamento;
 	}
 	
 	@DeleteMapping("/{id}")
-	public void apagar(@PathVariable("id") Long id) {
+	public void apagar(@PathVariable Long id) {
 		pagamentoService.deletar(id);
 	}
 }

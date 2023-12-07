@@ -1,6 +1,6 @@
 package com.dev.despesa.model;
 
-import java.time.LocalDate;
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.Date;
 
@@ -22,6 +22,8 @@ public class Despesa {
 	private String nome;
 	private String descricao;
 	private StatusDespesa status;
+	
+	private BigDecimal valor;
 	
 	@CreationTimestamp
 	private OffsetDateTime dataCriacao;
