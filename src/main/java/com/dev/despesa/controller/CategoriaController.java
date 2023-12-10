@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.despesa.model.Categoria;
-import com.dev.despesa.repository.CategoriaRepository;
 import com.dev.despesa.service.CategoriaService;
 
 @RestController
@@ -20,24 +19,24 @@ public class CategoriaController {
 
 	@Autowired
 	private CategoriaService categoriaService;
-	
+
 	@GetMapping
-	public List<Categoria> listar(){
+	public List<Categoria> listar() {
 		return categoriaService.listarCategorias();
 	}
-	
+
 	@PostMapping
 	public Categoria inserir(@RequestBody Categoria categoria) {
 		if (categoria == null) {
 			return null;
 		}
-		
+
 		return categoriaService.inserirCategoria(categoria);
 	}
-	
+
 	@GetMapping("/{id}")
 	public Categoria buscar(@RequestParam("id") Long id) {
 		return categoriaService.buscarCategoria(id);
 	}
-	
+
 }
