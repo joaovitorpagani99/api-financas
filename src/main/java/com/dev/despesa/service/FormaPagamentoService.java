@@ -28,13 +28,6 @@ public class FormaPagamentoService {
 
 	@Transactional
 	public FormaDePagamento salvar(FormaDePagamento pagamento) {		
-		FormaDePagamento dePagamento = pagamemtoRepository.findByDescricao(pagamento.getDescricao()).get();
-		System.out.println("teste: "+dePagamento.toString());
-		if(dePagamento != null) {
-			throw new DataConflictException("Forma de pagamento ja existe.");
-		}
-		System.out.println("aqui"+ pagamento.toString());
-
 		try {
 			return pagamemtoRepository.save(pagamento);
 		} catch (Exception e) {

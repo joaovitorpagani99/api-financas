@@ -12,5 +12,8 @@ public record CriarUsuarioDTO(
 		@Email String email,
 
 		@NotBlank String senha,
-		RolesNome role) {
+		
+		RolesNome role
+		
+		) {
 }
