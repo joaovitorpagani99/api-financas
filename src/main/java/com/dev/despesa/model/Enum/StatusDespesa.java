@@ -1,4 +1,4 @@
-package com.dev.despesa.model;
+package com.dev.despesa.model.Enum;
 
 public enum StatusDespesa {
 	ABERTO,

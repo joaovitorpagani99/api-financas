@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.despesa.model.Despesa;
-import com.dev.despesa.model.StatusDespesa;
+import com.dev.despesa.model.Enum.StatusDespesa;
 import com.dev.despesa.service.DespesaService;
 
 @RestController
